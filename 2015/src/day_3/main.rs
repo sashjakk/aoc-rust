@@ -53,35 +53,35 @@ fn deliver_gifts(
     }
 }
 
-// #[cfg(test)]
-// mod tests {
-//     use super::deliver_gifts;
-//     use std::collections::HashMap;
+#[cfg(test)]
+mod tests {
+    use super::deliver_gifts;
+    use std::collections::HashMap;
 
-//     #[test]
-//     fn delivers_to_two_houses() {
-//         let position = (0, 0);
-//         let mut houses = HashMap::from([((0, 0), 1)]);
+    #[test]
+    fn delivers_to_two_houses() {
+        let position = (0, 0);
+        let mut houses = HashMap::from([((0, 0), 1)]);
 
-//         deliver_gifts(position, &mut houses, ">");
-//         assert_eq!(houses.len(), 2);
-//     }
+        deliver_gifts(position, &mut houses, ">".chars());
+        assert_eq!(houses.len(), 2);
+    }
 
-//     #[test]
-//     fn delivers_to_four_houses() {
-//         let position = (0, 0);
-//         let mut houses = HashMap::from([((0, 0), 1)]);
+    #[test]
+    fn delivers_to_four_houses() {
+        let position = (0, 0);
+        let mut houses = HashMap::from([((0, 0), 1)]);
 
-//         deliver_gifts(position, &mut houses, "^>v<");
-//         assert_eq!(houses.len(), 4);
-//     }
+        deliver_gifts(position, &mut houses, "^>v<".chars());
+        assert_eq!(houses.len(), 4);
+    }
 
-//     #[test]
-//     fn delivers_to_two_houses_again() {
-//         let position = (0, 0);
-//         let mut houses = HashMap::from([((0, 0), 1)]);
+    #[test]
+    fn delivers_to_two_houses_again() {
+        let position = (0, 0);
+        let mut houses = HashMap::from([((0, 0), 1)]);
 
-//         deliver_gifts(position, &mut houses, "^v^v^v^v^v");
-//         assert_eq!(houses.len(), 2);
-//     }
-// }
+        deliver_gifts(position, &mut houses, "^v^v^v^v^v".chars());
+        assert_eq!(houses.len(), 2);
+    }
+}
