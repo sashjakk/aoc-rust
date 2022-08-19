@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 md5 = "0.7.0"
 regex = "1.6.0"
+unescape = "0.1.0"
 
 [[bin]]
 name = "day_1"
@@ -36,3 +37,7 @@ path = "src/day_6/main.rs"
 [[bin]]
 name = "day_7"
 path = "src/day_7/main.rs"
+
+[[bin]]
+name = "day_8"
+path = "src/day_8/main.rs"
